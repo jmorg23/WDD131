@@ -1,37 +1,48 @@
      body {
-            margin: 500px;
-        }
+         margin: 500px;
+     }
 
-        p {
-            font-family: Arial, sans-serif;
-            line-height: 1.8;
-        }
+     p {
+         font-family: Arial, sans-serif;
+         line-height: 1.8;
+     }
 
-        h1 {
-            color: #393e42;
-            text-align: center;
-            font-size: 24px;
-            font-family: 'Times New Roman', Times, serif;
+     h1 {
+         color: #393e42;
+         text-align: center;
+         font-size: 24px;
+         font-family: 'Times New Roman', Times, serif;
 
 
-        }
-        h2 {
-            color: #3d92e7;
-            text-align: center;
-            font-size: 12px;
-        }
-        i {
-            font-family: 'Times New Roman', Times, serif;
-            font-style: italic;
-                        line-height: 1.8;
+     }
 
-        }
-        .im {
-            display: block;
-            margin: 0 auto;
-            
-        }
-        .ol {
-            font-family: 'Times New Roman', Times, serif;
-            line-height: 1.8;
-        }
+     h2 {
+         color: #3d92e7;
+         text-align: center;
+         font-size: 12px;
+     }
+
+     i {
+         font-family: 'Times New Roman', Times, serif;
+         font-style: italic;
+         line-height: 1.8;
+
+     }
+
+     .im {
+         display: block;
+         margin: 0 auto;
+
+     }
+
+     .ol {
+         font-family: 'Times New Roman', Times, serif;
+         line-height: 1.8;
+     }
+
+     body {
+         max-width: 60%;
+         border: 1px solid darkgrey;
+         margin: 40px auto;
+         padding: 50px;
+     }

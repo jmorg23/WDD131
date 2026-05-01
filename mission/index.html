@@ -10,6 +10,18 @@
 
 <body>
 
+
+    <select>
+
+            <option>Choose Mode</option>
+
+            <option value="dark">Dark</option>
+
+            <option value="light">Light</option>
+
+    </select>
+
+
     <h1>MISSION STATEMENT</h1>
     <h2>BRIGHAM YOUNG UNIVERSITY-IDAHO</h2>
     <hr>
@@ -26,16 +38,40 @@
 
     <ol class="ol">
         <li>Building testimonies of the restored gospel of Jesus Christ and fostering its principles in a wholesome
-        academic, cultural, and social environment.</li>
+            academic, cultural, and social environment.</li>
         <li>Providing a high-quality education that prepares students of diverse
-        interests and abilities for lifelong learning and employment.</li>
+            interests and abilities for lifelong learning and employment.</li>
         <li>Serving as many students as possible within
-        resource constraints.</li>
+            resource constraints.</li>
         <li>Delivering education that is affordable for students and the Church.</li>
     </ol>
     <img src="b.webp" width="106" height="60" class="im"></img>
-    
 
+    <script>
+
+        let selectElem = document.querySelector('select');
+        let logo = document.querySelector('img');
+
+        selectElem.addEventListener('change', changeTheme);
+
+        function changeTheme() {
+            let current = selectElem.value;
+            if (current == 'dark') {
+                document.body.style.backgroundColor = '#333';
+                document.body.style.color = '#fff';
+                document.getElementsByTagName('h1')[0].style.color = '#fff';
+                logo.src = 'dark.png';
+                
+            } else {
+                document.body.style.backgroundColor = '#fff';
+                document.body.style.color = '#333';
+                document.getElementsByTagName('h1')[0].style.color = '#333';
+
+                logo.src = 'b.webp';
+            }
+        }
+
+    </script>
 
 </body>
 
