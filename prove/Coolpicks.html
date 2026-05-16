@@ -42,7 +42,7 @@
         text-align: center;
     }
 
-    @media (max-width: 900px) {
+     @media (max-width: 900px) {
         #menu {
             width: 100px;
         }
@@ -61,8 +61,54 @@
         }
 
 
+    } 
+dialog img {
+    width: 90%;
+    display: block;
+    margin: 20vh auto;
+}
+dialog {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.75);
+}
+.close-viewer {
+    position: absolute;
+    top: 10vh;
+    right: 2vh;
+    padding: 3px 6px;
+    font-size: 1.5em;
+}
+
+@media screen and (min-width: 700px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
+}
+@media screen and (min-width: 1000px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    dialog img {
+        width: 60%;
+        margin: 15vh auto;
+    }
+    .close-viewer {
+        position: absolute;
+        right: 15vh;
+    }
+    .viewer {
+        margin: 50px;
+        padding: 50px;
+    }
+    .viewer img {
+        max-width: 800px;
+    }
+
+
+}
 </style>
 
 <body>
@@ -89,19 +135,22 @@
     <div class="container">
 
 
-        <image src="c.jpg" width=100% height=100%>
-            <image src="c.jpg" width=100% height=100%>
-                <image src="c.jpg" width=100% height=100%>
-                    <image src="c.jpg" width=100% height=100%>
-                        <image src="c.jpg" width=100% height=100%>
-                            <image src="c.jpg" width=100% height=100%>
-                                <image src="c.jpg" width=100% height=100%>
-                                    <image src="c.jpg" width=100% height=100%>
-                                        <image src="c.jpg" width=100% height=100%>
+        <image src="c.jpg" width=100% height=100% alt = "cool pic right?">
+            <image src="c.jpg" width=100% height=100% alt = "cool pic right?">
+                <image src="c.jpg" width=100% height=100% alt = "cool pic right?">
+                    <image src="c.jpg" width=100% height=100% alt = "cool pic right?">
+                        <image src="c.jpg" width=100% height=100% alt = "cool pic right?">
+                            <image src="c.jpg" width=100% height=100% alt = "cool pic right?">
+                                <image src="c.jpg" width=100% height=100% alt = "cool pic right?">
+                                    <image src="c.jpg" width=100% height=100% alt = "cool pic right?">
+                                        <image src="c.jpg" width=100% height=100% alt = "cool pic right?">
 
 
     </div>
-
+<dialog>
+    <img>
+    <button class="close-viewer">X</button>
+</dialog>
 
 
 
@@ -110,24 +159,33 @@
 
 </body>
 <script>
-    let selectElem = document.querySelector('#menu');
-    let pageContent = document.querySelector('body');
 
-    selectElem.addEventListener('change', menu);
+const gallery = document.querySelector('.container');
+const modal = document.querySelector('dialog');
+const modalImage = modal.querySelector('img');
+const closeButton = modal.querySelector('.close-viewer');
 
-    function menu() {
-        let current = selectElem.value;
-        if (current == 'home') {
-            alert('Welcome to Coolpicks!');
-        } else if (current == 'places') {
-            alert('Explore our collection of stunning places!');
-        } else if (current == 'about') {
-            alert('Coolpicks is a photography website showcasing beautiful images from around the world.');
-        } else if (current == 'contact') {
-            alert('Contact us at info@coolpicks.com');
-        }
+// Event listener for opening the modal
+gallery.addEventListener('click', openModal);
 
+function openModal(e) {
+    console.log(e.target.src);
+    modalImage.src = "ch.jpg"; 
+    modal.showModal();
+// Code to show modal  - Use event parameter 'e'   
+    
+}
+// Close modal on button click
+closeButton.addEventListener('click', () => {
+    modal.close();
+});
+
+// Close modal if clicking outside the image
+modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.close();
     }
+});
 </script>
 <footer>
     <p style="text-align: center;">&copy; 2024 Coolpicks. All rights reserved.</p>
