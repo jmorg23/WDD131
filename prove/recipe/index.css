@@ -46,7 +46,7 @@ img {
     font-size: 1rem;
 }
 
-#search button {
+.search button {
     width: 60px;
     cursor: pointer;
     background: white;
@@ -127,33 +127,3 @@ footer {
     width: 35px;
 }
 
-
-@media (max-width:700px) {
-
-    .recipe {
-
-        flex-direction: column;
-    }
-
-    .recipe-image {
-
-        width: 100%;
-    }
-
-    .description {
-
-        display: none;
-    }
-
-    .logo h1 {
-
-        font-size: 3rem;
-    }
-
-    footer {
-
-        justify-content: center;
-        text-align: center;
-    }
-
-}
